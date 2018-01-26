@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MorphAI_Delinquent {
 
 	/// <summary>
-	/// 
+	/// Manages visual display of the game board.
 	/// </summary> 
 	/// <para>
 	/// Author: Robert Thompson

@@ -8,7 +8,8 @@ using System.Diagnostics;
 namespace MorphAI_Delinquent {
 
 	/// <summary>
-	/// 
+	/// Primary processing module for the Delinquent AI. Calculates and 
+	/// selects AI moves during gameplay.
 	/// </summary> 
 	/// <para>
 	/// Author: Robert Thompson

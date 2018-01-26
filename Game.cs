@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace MorphAI_Delinquent {
 
 	/// <summary>
-	/// 
+	/// Stores and manages elements of the game itself, including players,  
+	/// turns, and the board.
 	/// </summary> 
 	/// <para>
 	/// Author: Robert Thompson

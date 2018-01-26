@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace MorphAI_Delinquent {
 
 	/// <summary>
-	/// 
+	/// Core class of Delinquent, containing Main method and primary game objects.
 	/// </summary> 
 	/// <para>
 	/// Author: Robert Thompson
