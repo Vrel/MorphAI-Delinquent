@@ -30,9 +30,7 @@ Piece Value: The total value of all pieces remaining under the player's control.
 
 Board Advance: A calculation of how far the player's pieces have moved from their original positions toward the other player (or to the left/right in the case of the king). It is considered advantageous to be less advanced due to the limited ability to move pieces back once they have been advanced down the board. Favoring positions that are closer to the player's own end of the board means they will maintain more options further into the course of the game.
 
-Mobility: A relative value of how many moves are available to the player.
-
-* Calculated as: ceiling of (total moves / number of pieces)
+Mobility: A relative value of how many moves are available to the player. Calculated as: ceiling of (total moves / number of pieces)
 	
 Piece Threat: The total value of the opponent pieces which the player is currently in a position to capture. These values are different than those listed previously in the piece value calculation. The king is very highly favored in this value as both threatening the opponents king and having your own king threatened are of vital significance to winning the game. This has the effect of orienting the resulting behavior around the “objective” of capturing the opponent's king while preventing them from doing the same.
 
