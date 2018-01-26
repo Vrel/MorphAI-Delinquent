@@ -21,18 +21,18 @@ Techniques: Minimax, Alpha-beta pruning, Iterative deepening, Transposition tabl
 
 The Eval() method determines an overall score for a board position by calculating the strength of the available moves for both Delinquent and its opponent and taking the difference between them (delinquent score - opponent score). Strength of available moves is calculated as the weighted sum of piece value, board advance, mobility, and piece threat.
 
-Piece Value: The total value of all pieces remaining under the player's control. The piece values are listed below. They are adjusted from the traditional chess values to account for the potential value of the piece it will change to after a move (in the case of rook/bishop/knight) as well as factors such as the lack of a queen, the lack of pawn promotion, and the differences in mobility that result from movement rules and board dimensions in Morph.
+*Piece Value:* The total value of all pieces remaining under the player's control. The piece values are listed below. They are adjusted from the traditional chess values to account for the potential value of the piece it will change to after a move (in the case of rook/bishop/knight) as well as factors such as the lack of a queen, the lack of pawn promotion, and the differences in mobility that result from movement rules and board dimensions in Morph.
 
 * Rook = 7
 * Knight = 5
 * Bishop = 4
 * Pawn = 1
 
-Board Advance: A calculation of how far the player's pieces have moved from their original positions toward the other player (or to the left/right in the case of the king). It is considered advantageous to be less advanced due to the limited ability to move pieces back once they have been advanced down the board. Favoring positions that are closer to the player's own end of the board means they will maintain more options further into the course of the game.
+*Board Advance:* A calculation of how far the player's pieces have moved from their original positions toward the other player (or to the left/right in the case of the king). It is considered advantageous to be less advanced due to the limited ability to move pieces back once they have been advanced down the board. Favoring positions that are closer to the player's own end of the board means they will maintain more options further into the course of the game.
 
-Mobility: A relative value of how many moves are available to the player. Calculated as: ceiling of (total moves / number of pieces)
+*Mobility:* A relative value of how many moves are available to the player. Calculated as: ceiling of (total moves / number of pieces)
 	
-Piece Threat: The total value of the opponent pieces which the player is currently in a position to capture. These values are different than those listed previously in the piece value calculation. The king is very highly favored in this value as both threatening the opponents king and having your own king threatened are of vital significance to winning the game. This has the effect of orienting the resulting behavior around the “objective” of capturing the opponent's king while preventing them from doing the same.
+*Piece Threat:* The total value of the opponent pieces which the player is currently in a position to capture. These values are different than those listed previously in the piece value calculation. The king is very highly favored in this value as both threatening the opponents king and having your own king threatened are of vital significance to winning the game. This has the effect of orienting the resulting behavior around the “objective” of capturing the opponent's king while preventing them from doing the same.
 
 * King = 10
 * Rook = 5
