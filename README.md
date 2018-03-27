@@ -9,17 +9,30 @@ Implementation of Minimax search algorithm to play a game called "Morph."
 *Requires .Net Framework 4.5.2 or later be installed in order to run.*
 
 ## Playing the Game
-The game consists of a small console window with a gray background. First state whether you would like to go first. Enter “y” or “yes” to go first or “n” or “no” to go second. After you make a selection, the board is displayed. Delinquent will always be displayed at the top, with the opponent (you) at the bottom. Whoever goes first will be in white, while whoever goes second will be in green. Enter your moves by to-from spaces as show in the row and column labels (e.g. B3C3). After you make a move, Delinquent will take 5 seconds and then make its move. When someone wins, a message will be displayed in red announcing the winner. At this point, you may hit [Enter] to exit the game.
+The game consists of a small console window with a gray background. First, state whether you would like to go first. Enter “y” or “yes” to go first or “n” or “no” to go second. After you make a selection, the board is displayed. Delinquent will always be displayed at the top, with the opponent (you) at the bottom. Whoever goes first will be in white, while whoever goes second will be in green. Enter your moves by to-from spaces as show in the row and column labels (e.g. B3C3). After you make a move, Delinquent will pause for 5 seconds and then make its move. When someone wins, a message will be displayed in red announcing the winner. When done reviewing the results, hit [Enter] to exit the game.
 
 ## Game Rules
 
+*Created and Written by Dr. V. Scott Gordon at California State University, Sacramento*
 
+This is a chess-like game in which each time a piece moves, it turns into another piece. For instance, when a knight moves, it becomes a rook. When a rook moves, it becomes a bishop, etc. It is played on a 6x8 board, and each side starts with 2 pawns, 2 knights, 2 bishops, 2 rooks, and a king. The king is confined to the back row, and can only move in one direction. Pieces can only move backwards if the move is a capture. Otherwise, the pieces move similarly to chess pieces. Players win by capturing the king, or if the opponent cannot move.
+
+The initial position is:
+
+        - K - - - -  (COMPUTER)
+       N B R R B N
+       - - P P - -
+       - - - - - -
+       - - - - - -
+       - - p p - -
+       n b r r b n
+       - - - - k -  (HUMAN)
 
 ## Coding and Architecture
 
 Techniques: Minimax, Alpha-beta pruning, Iterative deepening, Transposition tables
 
-The Eval() method determines an overall score for a board position by calculating the strength of the available moves for both Delinquent and its opponent and taking the difference between them (delinquent score - opponent score). Strength of available moves is calculated as the weighted sum of piece value, board advance, mobility, and piece threat.
+The Eval() method determines an overall score for a board position by calculating the strength of the available moves for both Delinquent and its opponent and taking the difference between them (delinquent score - opponent score). The strength of available moves is calculated as the weighted sum of piece value, board advance, mobility, and piece threat.
 
 **Piece Value:** The total value of all pieces remaining under the player's control. The piece values are listed below. They are adjusted from the traditional chess values to account for the potential value of the piece it will change to after a move (in the case of rook/bishop/knight) as well as factors such as the lack of a queen, the lack of pawn promotion, and the differences in mobility that result from movement rules and board dimensions in Morph.
 
